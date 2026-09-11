@@ -98,7 +98,7 @@ resource "azurerm_linux_virtual_machine" "linux" {
 
   admin_ssh_key {
     username   = var.admin_username
-    public_key = file("~/.ssh/azure-infra-dev.pub")
+    public_key = file("${path.module}/azure-infra-dev.pub")
   }
 
   os_disk {
